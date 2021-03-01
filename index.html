@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>School Management System - Design & Developed by Anjil Kshetri</title>
+</head>
+<body>
+<header>
+<div class="top_bar">
+<div class="container">
+<div class="col-md-6">
+<ul class="social">
+<li><a target="_blank" href="#"><i class="fa fa-facebook text-white"></i></a></li>
+<li><a target="_blank" href="#"><i class="fa fa-twitter text-white"></i></a></li>
+<li><a target="_blank" href="#"><i class="fa fa-instagram text-white"></i></a></li>
+</ul></div>
+
+<div class="col-md-6">
+<ul class="rightc">
+<li><i class="fa fa-envelope-o"></i> info@angil.com.np </li>
+<li><button type="button" class="btn btn-warning" style="border-radius: 16px;font-weight: 600;color:#000;letter-spacing: 1px;">APPLY NOW</button></li>      
+</ul>
+</div>
+</div>
+</div>
+<!--top_bar-->
+
+
+
+<nav class="navbar navbar-default" style="margin-bottom: 0px;!important" role="navigation">
+    	<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="/images/logo.png" height="50px" width="50px"></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">HOME</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT US</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">SCHOOL INTRODUCATION</a></li>
+							<li><a href="#">OUR VISION & MISSION</a></li>
+							<li><a href="#">INTERACTION OF THE SCHOOL</a></li>
+							<li><a href="#">NUMBER OF STUDENTS</a></li>
+						</ul>
+					</li>
+                    <li><a href="#">ADMISSION</a></li>
+                    <li><a href="#">CAREER</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">COURSES</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">BBA</a></li>
+                        <li><a href="#">Bsc.CSIT</a></li>
+                        <li><a href="#">BCS</a></li>
+                        <li><a href="#">CA</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">LOGIN</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/login-student.html">STUDENT</a></li>
+                        <li><a href="#">TEACHER</a></li>
+                        <li><a href="#">PARENTS</a></li>
+                        <li><a href="#">ADMIN</a></li>
+                      </ul>
+                    </li>
+				</ul>
+
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+   
+</header>
+
+<!------------------------------------Container START-------------------------------------------->
+<form action="#" method="get">
+  <input type="text" class="search-query" placeholder="Ex. CA, Bsc.CSIT" required><button class="btn_search"><span>Search</span></button>
+</form>
+<div class="header_image">
+
+  <ul class="slideshow">
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+  </ul>
+
+  <div class="header-title">
+    <h3>WHAT WOULD YOU LEARN?</h3>
+  </div>
+  <div class="sub-header">
+    <p>Increase your expertise in business, technology and personal development</p>
+  </div>
+  </div>
+
+<!------------------------------------Container END-------------------------------------------->
+
+<!-------------------------------------------------------------------------------->
+<script>
+
+$(document).ready(function(){
+
+$(".dropdown").hover(            
+
+    function() {
+
+        $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideDown("fast");
+
+        $(this).toggleClass('open');        
+
+    },
+
+    function() {
+
+        $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideUp("fast");
+
+        $(this).toggleClass('open');       
+
+    }
+
+);
+
+});
+</script>
+
+</body>
+</html>

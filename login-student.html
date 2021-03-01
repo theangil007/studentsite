@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>School Management System - Design & Developed by Anjil Kshetri</title>
+</head>
+<body>
+<header>
+<div class="top_bar">
+<div class="container">
+<div class="col-md-6">
+<ul class="social">
+<li><a target="_blank" href="#"><i class="fa fa-facebook text-white"></i></a></li>
+<li><a target="_blank" href="#"><i class="fa fa-twitter text-white"></i></a></li>
+<li><a target="_blank" href="#"><i class="fa fa-instagram text-white"></i></a></li>
+</ul></div>
+
+<div class="col-md-6">
+<ul class="rightc">
+<li><i class="fa fa-envelope-o"></i> info@angil.com.np </li>
+<li><button type="button" class="btn btn-warning" style="border-radius: 16px;font-weight: 600;color:#000;letter-spacing: 1px;">APPLY NOW</button></li>      
+</ul>
+</div>
+</div>
+</div>
+<!--top_bar-->
+
+
+
+<nav class="navbar navbar-default" style="margin-bottom: 0px;!important" role="navigation">
+    	<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/index.html"><img src="/images/logo.png" height="50px" width="50px"></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/index.html">HOME</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT US</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">SCHOOL INTRODUCATION</a></li>
+							<li><a href="#">OUR VISION & MISSION</a></li>
+							<li><a href="#">INTERACTION OF THE SCHOOL</a></li>
+							<li><a href="#">NUMBER OF STUDENTS</a></li>
+						</ul>
+					</li>
+                    <li><a href="#">ADMISSION</a></li>
+                    <li><a href="#">CAREER</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">COURSES</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">BBA</a></li>
+                        <li><a href="#">Bsc.CSIT</a></li>
+                        <li><a href="#">BCS</a></li>
+                        <li><a href="#">CA</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">LOGIN</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/login-student.html">STUDENT</a></li>
+                        <li><a href="#">TEACHER</a></li>
+                        <li><a href="#">PARENTS</a></li>
+                        <li><a href="#">ADMIN</a></li>
+                      </ul>
+                    </li>
+				</ul>
+
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+   
+</header>
+
+<br>
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <div class="login100-pic js-tilt" data-tilt>
+        <img src="/images/login-student.png" alt="IMG">
+      </div>
+
+      <form class="login100-form validate-form">
+        <span class="login100-form-title">
+          Login as a Student
+        </span>
+  <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+    <input class="input100" type="text" name="email" placeholder="Email">
+    <span class="focus-input100"></span>
+    <span class="symbol-input100">
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+    </span>
+  </div>
+
+  <div class="wrap-input100 validate-input" data-validate = "Password is required">
+    <input class="input100" type="password" name="pass" placeholder="Password">
+    <span class="focus-input100"></span>
+    <span class="symbol-input100">
+      <i class="fa fa-lock" aria-hidden="true"></i>
+    </span>
+  </div>
+  <div class="container-login100-form-btn">
+    <button class="login100-form-btn">
+      <a href="/login-student/index.html" style="color:#fff;">Login</a>
+      </button>
+  </div>
+
+        <div class="text-center p-t-12">
+          <span class="txt1">
+            Forgot
+          </span>
+          <a class="txt2" href="#">
+            Username / Password?
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!--------------------------------------JS------------------------------------------>
+<script>
+  $('.js-tilt').tilt({
+			scale: 1.1
+		})
+
+(function ($) {
+    "use strict";
+
+    
+    /*==================================================================
+    [ Validate ]*/
+    var input = $('.validate-input .input100');
+
+    $('.validate-form').on('submit',function(){
+        var check = true;
+
+        for(var i=0; i<input.length; i++) {
+            if(validate(input[i]) == false){
+                showValidate(input[i]);
+                check=false;
+            }
+        }
+
+        return check;
+    });
+
+
+    $('.validate-form .input100').each(function(){
+        $(this).focus(function(){
+           hideValidate(this);
+        });
+    });
+
+    function validate (input) {
+        if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
+            if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+                return false;
+            }
+        }
+        else {
+            if($(input).val().trim() == ''){
+                return false;
+            }
+        }
+    }
+
+    function showValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).addClass('alert-validate');
+    }
+
+    function hideValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).removeClass('alert-validate');
+    }
+    
+    
+
+})(jQuery);
+</script>
+
+<script>
+
+    $(document).ready(function(){
+    
+    $(".dropdown").hover(            
+    
+        function() {
+    
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideDown("fast");
+    
+            $(this).toggleClass('open');        
+    
+        },
+    
+        function() {
+    
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideUp("fast");
+    
+            $(this).toggleClass('open');       
+    
+        }
+    
+    );
+    
+    });
+    </script>
+</body>
+</html>
